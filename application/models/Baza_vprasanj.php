@@ -181,7 +181,7 @@ class Baza_vprasanj extends CI_Model{
 	{
 		$ocena = $pravilnostTekstovnegaOdg;
 		$i = 0;
-		while($ocena-$hitrostOdgovora>20 && $i<5)
+		while($ocena-$hitrostOdgovora>0 && $i<5)
 		{
 			$ocena = $ocena - $hitrostOdgovora;
 			$i++;

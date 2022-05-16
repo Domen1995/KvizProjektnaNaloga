@@ -15,4 +15,17 @@ echo "</p>";
 echo form_submit('submit', 'Oddaj odgovor!');
 echo form_close();
 ?>
+
+<h2 id="trenutniCas">0</h2>
+<script>
+function casovnik(){
+	let trenutniCas = document.getElementById("trenutniCas").innerHTML;
+	trenutniCas++;
+	document.getElementById("trenutniCas").innerHTML = trenutniCas;
+	setTimeout(casovnik, 1000);
+}
+
+casovnik();
+
+</script>
 </div>
