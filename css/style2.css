@@ -14,7 +14,7 @@ ul{
 	/*padding-top: 15px;*/
 }
 
-#headerMenu, li a{
+#headerMenu li a{
 	font-family: tahoma;
 	font-size: 30px;
 	color:grey;
@@ -30,8 +30,9 @@ ul{
 	background-color:rgb(80,0,0);
 }
 
-li a:hover{
+#headerMenu li a:hover{
 	background-color: rgb(100,0,0);
+	color: darkgrey;
 }
 
 #meniLevo{
@@ -72,13 +73,22 @@ form span{
 	font-size: 30px;
 }
 
+
 #podrocjaVpr{
-	background-color: green;
-	font-size: 30px;
-	padding: 15px;
-	color:black;
-	background-color: green;
+	width:50%;
+	margin:auto;
 }
+
+
+#podrocjaVpr li a{
+	background-color: green;
+	font-size: 25px;
+	padding: 5px 15px 5px 15px;
+	color:black;
+	float: left;
+	/*padding-left: 50%;*/
+}
+
 /*
 #ozadjeVprasanja{
 	background-image: url('slike/test-results-in-school-picture-id529206743.jpg');
