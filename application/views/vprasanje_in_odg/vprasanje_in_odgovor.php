@@ -1,5 +1,11 @@
+<style>
+	body{
+		background-image: url('<?php echo base_url(); ?>/slike/test-results-in-school-picture-id529206743.jpg');
+		background-size: cover;
+	}
+</style>
 <div>
-
+<span id="ozadjeVprasanja"></span>
 <!--<h2>Pazite! Ob zvitem poskusu vrnitve na predhodno vprašanje se bodo vaše skupne točke sfižile!</h2> -->
 
 <?php

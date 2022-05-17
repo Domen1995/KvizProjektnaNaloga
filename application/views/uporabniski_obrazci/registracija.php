@@ -1,26 +1,8 @@
-<div>
-<?php
-echo validation_errors();
-echo form_open('Uporabniki/registriraj');
-echo form_label('Vaš bodoči vzdevek: ');
-echo "<br>";
-echo form_input('vzdevek');
-echo "<br>";
-echo form_label('Domislite se še gesla: ');
-echo "<br>";
-echo form_password('geslo');
-echo "<br>";
-echo form_label('Pa nam zaupajte še svoj e-naslov: ');
-echo form_input('enaslov');
-echo "<br>";
-if(isset($neveljavenEnaslov))
-{
-	echo $neveljavenEnaslov;
-}elseif(isset($neveljavniPodatki))
-{
-	echo $neveljavniPodatki;
-}
-echo form_submit('submit', 'Registracija!');
-echo form_close();
-?>
-</div>
+<br>
+<div id="prijava">
+<form action="https://www.studenti.famnit.upr.si/~89181150/Kviz/CodeIgniter/index.php/Uporabniki/registriraj" method="post" accept-charset="utf-8">
+<label><span>Vaš bodoči vzdevek: </span></label><br><input type="text" name="vzdevek" value=""  />
+<br><label><span>Domislite se še gesla: </span></label><br><input type="password" name="geslo" value=""  />
+<br><label><span>Pa nam zaupajte še svoj e-naslov: </span></label><input type="text" name="enaslov" value=""  />
+<br><input type="submit" name="submit" value="Registracija!"  />
+</form></div>
