@@ -1,9 +1,9 @@
 <p>
-<h3>Na listo so uvrščeni tekmovalci, ki so podali najmanj 40 odgovorov.</h3>
+<h3 style="text-align: center; color:grey; font-size: 20px; font-family: tahoma">Na listo so uvrščeni tekmovalci, ki so podali najmanj 40 odgovorov.</h3>
 <?php 
 if(isset($this->session->userdata['prijavljen']) && isset($manjkajocihVprasanj))
 {?>
-	<p>Vam jih manjka še <?php echo $manjkajocihVprasanj?>.</p>
+	<p style="text-align: center; color:grey; font-size: 20px; font-family: tahoma">Vam jih manjka še <?php echo $manjkajocihVprasanj?>.</p>
 <?php }?>
 
 <table>
@@ -24,7 +24,7 @@ if(isset($this->session->userdata['prijavljen']) && isset($manjkajocihVprasanj))
 		echo "</td>";
 		echo "<td>";
 		echo $tekmovalecProcenti[1];
-		echo "</td>";
+		echo "%</td>";
 		echo "</tr>";
 	}
 	?>

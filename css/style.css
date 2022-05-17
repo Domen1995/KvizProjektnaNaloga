@@ -1,35 +1,38 @@
-html{
-/*background-color:rgb(40,0,0);*/
-background-color: green;
+body{
+	/*background-color:rgb(40,0,0);*/
 }
 
-p{
-	background-color: blue;
-}
-/*
+
 a{
 	text-decoration: none;
 	color:grey;
-	/*font-family: tahoma;
+	font-family: tahoma;
 }
 
 ul{
 	list-style-type: none;
-	padding-top: 15px;
+	/*padding-top: 15px;*/
 }
 
-li a{
+#headerMenu li a{
 	font-family: tahoma;
 	font-size: 30px;
 	color:grey;
 	float:left;
 	text-decoration: none;
-	padding:30px;
+	padding: 11px 30px 11px 30px; /*30px;*/
+	/*
+	padding-left: :30px;
+	padding-right: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	*/
 	background-color:rgb(80,0,0);
 }
 
-li a:hover{
+#headerMenu li a:hover{
 	background-color: rgb(100,0,0);
+	color: darkgrey;
 }
 
 #meniLevo{
@@ -57,4 +60,89 @@ form span{
 	margin:10px;
 	size:6;
 }
+
+.beloOzadje{
+	text-align: center;
+	/*background-color: white;*/
+	font-family: tahoma;
+	font-size: 20px;
+	/*padding-bottom: 10px;*/
+}
+
+/*
+.beloOzadje p{
+	font-size: 30px;
+}
 */
+
+
+#podrocjaVpr{
+	width:45%;
+	margin:auto;
+}
+
+
+#podrocjaVpr li a{
+	background-color: green;
+	font-size: 25px;
+	padding: 5px 15px 5px 15px;
+	color:black;
+	float: left;
+	/*padding-left: 50%;*/
+}
+
+#podrocjaVpr li a:hover{
+	background-color: rgb(0, 160, 0);
+	color:rgb(50, 50, 50);
+	/*padding-left: 50%;*/
+}
+
+#podrocjaLevo{
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+
+#podrocjaDesno{
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+.vprasanje{
+	font-size: 25px;
+}
+
+#gumbServirajVpr{
+	height: 50px;
+	width: 280px;
+	font-size: 20px;
+}
+
+#gumbOddajVpr{
+	height: 50px;
+	width: 180px;
+	font-size: 20px;
+}
+
+#tekstInput{
+	height: 35px;
+	width: 210px;
+	font-size: 20px;
+}
+
+#gumbNaslednjeVprasanje{
+	height: 50px;
+	width: 210px;
+	font-size: 20px;
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+	color:grey;
+	text-align:center;
+}
+
+/*
+#ozadjeVprasanja{
+	background-image: url('slike/test-results-in-school-picture-id529206743.jpg');
+}
