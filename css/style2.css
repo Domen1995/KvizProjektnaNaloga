@@ -89,6 +89,16 @@ form span{
 	/*padding-left: 50%;*/
 }
 
+#podrocjaLevo{
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+
+#podrocjaDesno{
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
 /*
 #ozadjeVprasanja{
 	background-image: url('slike/test-results-in-school-picture-id529206743.jpg');

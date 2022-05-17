@@ -117,6 +117,11 @@ class Baza_vprasanj extends CI_Model{
 		$this->db->set($data);
 		$this->db->where($pogoj);
 		$this->db->update('Odgovori_test');
+		$odgovorovZaIzbrisati = $indeksZadnjegaVprasanja-42;
+		if($odgovorovZaIzbrisati>0)
+		{
+			$this->izbrisiOdgovore($odgovorovZaIzbrisati);
+		}
 	}
 
 	/*
@@ -197,16 +202,21 @@ class Baza_vprasanj extends CI_Model{
 		*/
 	}
 
-	public function izbrisiOdgovor($id)
+	public function izbrisiOdgovore($id)
+		// izbrise toliko odg, da jih ostane zadnjih 40
 	{
 		/*
 		$pogoj = "tekmovalec = '".$_SESSION['vzdevek']."' AND id = '".$id."'";
 		$data['tekmovalec'] = $_SESSION['vzdevek'];
 		$data['id'] = $id;
 		*/
-		$data = array('tekmovalec' => $_SESSION['vzdevek'], 'id' => $id);
-		$this->db->where($data);
-		$this->db->delete("Odgovori_test");
+		$vzdevek = $_SESSION['vzdevek'];
+		for($i=1; $i<=$id; $i++)
+		{
+			$data = array('tekmovalec' => $vzdevek, 'id' => $i);
+			$this->db->where($data);
+			$this->db->delete("Odgovori_test");
+		}
 	}
 
 	public function izbrisiVseOdgUporabnika()

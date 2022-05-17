@@ -22,7 +22,7 @@ echo form_submit('submit', 'Oddaj odgovor!');
 echo form_close();
 ?>
 
-<h2 id="trenutniCas">0</h2>
+<h2 id="trenutniCas">-1</h2>
 <script>
 function casovnik(){
 	let trenutniCas = document.getElementById("trenutniCas").innerHTML;
