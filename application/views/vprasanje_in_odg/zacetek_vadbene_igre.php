@@ -6,8 +6,8 @@
 </style>
 
 <div class="beloOzadje">
-<h3>Tule vaši odgovori ne bodo vplivali na točke ter vas uvrstili na rang listo, tudi če ste prijavljeni.</h3>
-<p>Izberite želeno področje vprašanja: </p>
+<h3><span style="background-color: white; padding:15px">Tule vaši odgovori ne bodo vplivali na točke ter vas uvrstili na rang listo, tudi če ste prijavljeni.</span></h3>
+<p><span style="background-color: white; padding: 15px">Izberite želeno področje vprašanja: </span></p>
 
 <ul id="podrocjaVpr">
 	<li><a id="podrocjaLevo" href="<?php echo site_url('Vadbena/random_question_podrocja/Knjizevnost_tekstovni'); ?>">Književnost</a></li>

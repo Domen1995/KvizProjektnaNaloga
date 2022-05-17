@@ -63,7 +63,7 @@ form span{
 
 .beloOzadje{
 	text-align: center;
-	background-color: white;
+	/*background-color: white;*/
 	font-family: tahoma;
 	font-size: 20px;
 	padding-bottom: 10px;
@@ -103,6 +103,34 @@ form span{
 #podrocjaDesno{
 	border-top-right-radius: 30px;
 	border-bottom-right-radius: 30px;
+}
+
+.vprasanje{
+	font-size: 25px;
+}
+
+#gumbServirajVpr{
+	height: 50px;
+	width: 280px;
+	font-size: 20px;
+}
+
+#gumbOddajVpr{
+	height: 50px;
+	width: 180px;
+	font-size: 20px;
+}
+
+#tekstInput{
+	height: 35px;
+	width: 210px;
+	font-size: 20px;
+}
+
+#gumbNaslednjeVprasanje{
+	height: 50px;
+	width: 210px;
+	font-size: 20px;
 }
 
 /*

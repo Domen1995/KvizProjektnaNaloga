@@ -25,8 +25,7 @@
 		  ?></p>
 
 <?php
-echo form_open('vprasanja/random_question');
-echo form_submit('submit', "Naslednje vprašanje.");
-echo form_close();
-?>
+echo form_open('vprasanja/random_question'); ?>
+<input id="gumbNaslednjeVprasanje" type="submit" name="submit" value="Naslednje vprašanje!"  />
+</form>
 </div>

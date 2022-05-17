@@ -12,17 +12,19 @@
 //$data['vprasanjeInOdg'] = "bla";
 echo validation_errors();
 echo form_open('vadbena/fetch_answer/'.$vprasanjeIdOdg['sifra']);
-echo "<div>";
-echo $vprasanjeIdOdg['Vprasanje']; 
-echo "</div>";
-echo "<p>";
-echo form_input('answer');
-echo "</p>";
-echo form_submit('submit', 'Oddaj odgovor!');
-echo form_close();
+echo "<div class='vprasanje'>";
 ?>
+<span style="background-color: white; padding:15px">
+<?php
+echo $vprasanjeIdOdg['Vprasanje']; 
+echo "</span>";
+echo "</div>";
+echo "<p>";?>
+<input id="tekstInput" type="text" name="answer" value="">
+</p><input id="gumbOddajVpr" type="submit" name="submit" value="Oddaj odgovor!">
+</form>
 
-<h2 id="trenutniCas">-1</h2>
+<h2> <span id="trenutniCas" style="background-color: rgb(255, 0, 0); padding: 10px">-1</span></h2>
 <script>
 function casovnik(){
 	let trenutniCas = document.getElementById("trenutniCas").innerHTML;
