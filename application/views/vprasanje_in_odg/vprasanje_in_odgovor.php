@@ -4,8 +4,8 @@
 		background-size: cover;
 	}
 </style>
-<div>
-<span id="ozadjeVprasanja"></span>
+<div class="beloOzadje">
+<!--<span id="ozadjeVprasanja"></span> -->
 <!--<h2>Pazite! Ob zvitem poskusu vrnitve na predhodno vprašanje se bodo vaše skupne točke sfižile!</h2> -->
 
 <?php

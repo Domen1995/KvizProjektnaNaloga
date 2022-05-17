@@ -5,6 +5,7 @@
 	}
 </style>
 
+<div class="beloOzadje">
 <p> <?php echo "Pravilni odgovor: ";
 		  echo $odgovorPravilni."<br>";
 		  echo "Vaš odgovor: ";
@@ -21,7 +22,7 @@
 		  echo $pravilnostTeksUpostevajocCas."%.";
 		  ?></p>
 
-<div class="beloOzadje">
+<!--<div class="beloOzadje"> -->
 <p>Izberite želeno področje naslednjega vprašanja: </p>
 
 <ul id="podrocjaVpr">

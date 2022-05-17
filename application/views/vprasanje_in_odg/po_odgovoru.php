@@ -5,6 +5,8 @@
 	}
 </style>
 
+<div class="beloOzadje">
+
 <p> <?php echo "Pravilni odgovor: ";
 		  echo $odgovorPravilni."<br>";
 		  echo "Vaš odgovor: ";
@@ -27,3 +29,4 @@ echo form_open('vprasanja/random_question');
 echo form_submit('submit', "Naslednje vprašanje.");
 echo form_close();
 ?>
+</div>
