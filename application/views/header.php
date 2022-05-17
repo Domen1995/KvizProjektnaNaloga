@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Kviz</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/style1.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/style2.css">
 </head>
 	<body>
 		<ul>

@@ -1,3 +1,10 @@
+<style>
+	body{
+		background-image: url('<?php echo base_url(); ?>/slike/test-results-in-school-picture-id529206743.jpg');
+		background-size: cover;
+	}
+</style>
+
 <p> <?php echo "Pravilni odgovor: ";
 		  echo $odgovorPravilni."<br>";
 		  echo "Vaš odgovor: ";

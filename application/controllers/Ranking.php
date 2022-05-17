@@ -31,12 +31,14 @@ class Ranking extends CI_Controller{
 		$sortiraniProcenti = $this->procentiPadajoce($procenti);
 		$tekmovalciProcentiPadaj = $this->tekmovalciProcentiPadajoce($tekmovalciProcenti, $sortiraniProcenti);
 		$data['tekmovalciProcenti'] = $tekmovalciProcentiPadaj;
+		/*
 		$maksIdVprasanjaUporabnika = $this->Baza_vprasanj->maksIdVprasanjaUporabnika();
 		if($maksIdVprasanjaUporabnika < 40)
 		{
 			$manjkajocihVprasanj = 40-$maksIdVprasanjaUporabnika;
 			$data['manjkajocihVprasanj'] = $manjkajocihVprasanj;
 		}
+		*/
 		$this->load->view('header');
 		$this->load->view('rang lista/ranklist', $data);
 		$this->load->view('footer');

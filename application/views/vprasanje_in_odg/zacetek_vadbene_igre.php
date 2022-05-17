@@ -1,3 +1,10 @@
+<style>
+	body{
+		background-image: url('<?php echo base_url(); ?>/slike/test-results-in-school-picture-id529206743.jpg');
+		background-size: cover;
+	}
+</style>
+
 <h2>Tule vaši odgovori ne bodo vplivali na točke ter vas uvrstili na rang listo, tudi če ste prijavljeni.</h2>
 <p>Izberite želeno področje vprašanja: </p>
 

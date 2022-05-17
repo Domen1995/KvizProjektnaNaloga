@@ -1,0 +1,257 @@
+[33mcommit 863ae9eb0ef39519dc2dbfd8bdf26b47b6eb9bcc[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m)[m
+Author: Domen1995 <tapewormerbinkosti@gmail.com>
+Date:   Tue May 17 12:48:06 2022 +0200
+
+    Slika
+
+[33mcommit 8bc302a1dad24fad833ef14dd17e161bbd477f14[m
+Author: Domen1995 <tapewormerbinkosti@gmail.com>
+Date:   Mon May 16 22:37:56 2022 +0200
+
+    spreminjanje casa
+
+[33mcommit 8f1f0b3f781379708997e8801afa49e82187092e[m
+Author: Domen1995 <tapewormerbinkosti@gmail.com>
+Date:   Mon May 16 22:02:23 2022 +0200
+
+    Kviz
+
+[33mcommit 87f9ac6ca2eb125f5991243865e7e5e96fd3987b[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: f73181e2e 2042929ba
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Thu Mar 3 15:29:55 2022 +0200
+
+    Merge branch '3.1-stable' into develop
+
+[33mcommit 2042929bab8ffc14faf6193de0107b7f95abbdaf[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Thu Mar 3 15:09:04 2022 +0200
+
+    [ci skip] Doc updates for 3.1.13 start and changelog entry for #6107
+
+[33mcommit 68ff9c151bbcf6192580f7a09b6097f60bd12af7[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Thu Mar 3 15:03:46 2022 +0200
+
+    [ci skip] Remove epub-related stuff from build-release script
+
+[33mcommit dc8dbf23cd97f4fde38f8f614dd49b59da163641[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Thu Mar 3 14:50:01 2022 +0200
+
+    [ci skip] Merge pull request #6107 from ducng99/patch-1
+    
+    Fix SessionUpdateTimestampHandlerInterface name
+
+[33mcommit f73181e2e4036b3f322ddac7bf266b1cf13d06a0[m
+Merge: 337818048 48432138b
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Thu Mar 3 14:50:01 2022 +0200
+
+    [ci skip] Merge pull request #6107 from ducng99/patch-1
+    
+    Fix SessionUpdateTimestampHandlerInterface name
+
+[33mcommit 48432138b967eb52203d30d70a5d1aacfbbbcacb[m
+Author: Thomas Nguyen <tom@ducng.dev>
+Date:   Thu Mar 3 16:08:34 2022 +1300
+
+    Fix SessionUpdateTimestampHandlerInterface name
+
+[33mcommit 3378180483140fa9251e50843bda15a508e85e89[m
+Merge: bb7192e43 4196eb22d
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Thu Mar 3 01:20:55 2022 +0200
+
+    Merge branch '3.1-stable' into develop
+
+[33mcommit 4196eb22d7aa2f9d8325865567c2cbb82fd70960[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Wed Mar 2 23:44:09 2022 +0200
+
+    [ci skip] Misc. maintenance
+
+[33mcommit 0fbd57882eeb1c682cb400b3b0d0224e3240920c[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Wed Mar 2 23:11:22 2022 +0200
+
+    [ci skip] Update copyright notices
+
+[33mcommit 9a24c007de20bec874cc9da851b5ab01644ba409[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Wed Mar 2 22:00:22 2022 +0200
+
+    [ci skip] Fix #6103
+
+[33mcommit d4b15bcdbd6a06e01d8de927c1d26f8f5bc4ed6c[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Tue Feb 22 12:16:26 2022 +0200
+
+    [ci skip] SessionUpdateTimestampHandlerInterface
+
+[33mcommit c7bf8487eafdaeeb137401eb6f63022ec8798f31[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Mon Feb 21 22:37:45 2022 +0200
+
+    [ci skip] Merge pull request #6102 from maxiwheat/develop
+    
+    Fix method _is_conn() in Ftp library
+
+[33mcommit bb7192e43b251cb9620b35859f6283e80897c331[m
+Merge: 852c14bbc 1af4c2b74
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Mon Feb 21 22:37:45 2022 +0200
+
+    [ci skip] Merge pull request #6102 from maxiwheat/develop
+    
+    Fix method _is_conn() in Ftp library
+
+[33mcommit 1af4c2b7485eb8bc233a84825beb9a75183bdd24[m
+Author: Philippe Meunier <pmeunier@cyberimpact.com>
+Date:   Thu Feb 17 14:06:06 2022 -0500
+
+    Fix method _is_conn() in Ftp library, was returning incorrect result for valid connection making it impossible to use FTP
+
+[33mcommit 4692d7a966d7440765266c4c8dda0c18816e4304[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Sun Feb 13 01:57:37 2022 +0200
+
+    [ci skip] Merge pull request #6100 from svennd/develop
+    
+    profiler.php PHP 8.1 deprecation notice
+
+[33mcommit 852c14bbca1277583c23a1977ddfc348af4d395a[m
+Merge: dc667a735 7e25c1830
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Sun Feb 13 01:57:37 2022 +0200
+
+    [ci skip] Merge pull request #6100 from svennd/develop
+    
+    profiler.php PHP 8.1 deprecation notice
+
+[33mcommit 7e25c1830dfd61fe38d370e0b2e0f6c740265fac[m
+Author: Svennd <svennson@gmail.com>
+Date:   Sat Feb 12 20:33:55 2022 +0100
+
+    feedback from narfbg
+
+[33mcommit affe39415ddded1174cf405e4f86d56850197493[m
+Author: Svennd <svennson@gmail.com>
+Date:   Fri Feb 11 16:34:07 2022 +0100
+
+    required spaces around cast
+
+[33mcommit dc667a73564012acb5c28df248942be055deff45[m
+Merge: cd81c1e6b 444f7977a
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Fri Feb 11 16:47:18 2022 +0200
+
+    Merge branch '3.1-stable' into develop
+
+[33mcommit 444f7977a82c09a00db8a74e9472d80fd4f50487[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Fri Feb 11 16:47:00 2022 +0200
+
+    [ci skip] chmod -x index.php (fix #6101)
+
+[33mcommit 6846d26d7b8d7a05d98bf2020f9348beb63d97d7[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Fri Feb 11 16:38:58 2022 +0200
+
+    [ci skip] Merge pull request #6098 from totoprayogo1916/indent-whitespaces
+    
+    Minor indentation & whitespace corrections
+
+[33mcommit cd81c1e6b206c2830fffb4c33d89cb61837f3253[m
+Merge: dd249ea85 dafbbba4f
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Fri Feb 11 16:38:58 2022 +0200
+
+    [ci skip] Merge pull request #6098 from totoprayogo1916/indent-whitespaces
+    
+    Minor indentation & whitespace corrections
+
+[33mcommit dafbbba4f0ce775b7a70f37ba12ee85b65a941b1[m
+Author: Toto Prayogo <mail@totoprayogo.com>
+Date:   Fri Feb 11 21:30:15 2022 +0700
+
+    whitespaces
+
+[33mcommit 61d77ed281390e0de66da3dbdde32d816c021b24[m
+Merge: 068640932 6db00c58b
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Fri Feb 11 16:17:01 2022 +0200
+
+    [ci skip] Merge pull request #6096 from jamieburchell/patch-1
+    
+    Fix passing NULL to setcookie() value parameter triggering a PHP 8.1 deprecation notice
+
+[33mcommit 9d30b03e35d6ed04ac287118f8d62625e81f9923[m
+Author: Svennd <svennson@gmail.com>
+Date:   Thu Feb 10 08:52:09 2022 +0100
+
+    Update Profiler.php
+    
+    fix it with string casting instead, based on feedback of jamieburchell :) thanks !
+
+[33mcommit 05d2877cc169d9f31f43e42a7c6aea5dd10facaf[m
+Author: Svennd <svennson@gmail.com>
+Date:   Wed Feb 9 21:13:25 2022 +0100
+
+    Update Profiler.php
+    
+    check for null value on $val
+
+[33mcommit 6db00c58bdd75e20ea58f6a1a5efe5f86ff4c2d7[m
+Author: Jamie Burchell <jamieburchell@users.noreply.github.com>
+Date:   Fri Feb 4 12:34:13 2022 +0000
+
+    Fix passing NULL to setcookie value parameter
+    
+    Fixes Passing null to parameter #2 ($value) of type string is deprecated
+
+[33mcommit 068640932168c263db30a969e7364fe8a3f53572[m
+Merge: 193df886a ad86fa92c
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Thu Feb 3 16:33:09 2022 +0200
+
+    Merge pull request #6092 from jamieburchell/patch-2
+    
+    Fix PHP 8.1 deprecation in DB_utility.php
+
+[33mcommit ad86fa92cd59ac1255af1dd5170919f6fbf73786[m
+Author: Jamie Burchell <jamieburchell@users.noreply.github.com>
+Date:   Tue Feb 1 16:57:24 2022 +0000
+
+    Typecast to string
+
+[33mcommit 7c68c379f554d8c53e8ccc1ec4660c4928c1d53a[m
+Author: Jamie Burchell <jamieburchell@users.noreply.github.com>
+Date:   Tue Feb 1 14:24:04 2022 +0000
+
+    Fix PHP 8.1 deprecation
+
+[33mcommit 193df886a54e0cac8416327f763a1e61dc2a3053[m
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Tue Feb 1 15:24:27 2022 +0200
+
+    Merge pull request #6090 from jamieburchell/patch-1
+    
+    Default $final_output to string instead of NULL for PHP 8.1 compatibility
+
+[33mcommit dd249ea85f54f200267bb206e6cee23497cbe2e2[m
+Merge: f4c2c4cb5 8d4b34ed5
+Author: Andrey Andreev <narf@devilix.net>
+Date:   Tue Feb 1 15:24:27 2022 +0200
+
+    Merge pull request #6090 from jamieburchell/patch-1
+    
+    Default $final_output to string instead of NULL for PHP 8.1 compatibility
+
+[33mcommit 8d4b34ed567f21851ad81b1dcd9dc917850e6527[m
+Author: Jamie Burchell <jamieburchell@users.noreply.github.com>
+Date:   Fri Jan 28 09:58:27 2022 +0000
+
+    Default $final_output to string instead of NULL
+    
+    Fixes https://github.c
