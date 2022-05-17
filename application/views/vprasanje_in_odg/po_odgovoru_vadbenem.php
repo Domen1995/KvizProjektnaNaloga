@@ -6,24 +6,25 @@
 </style>
 
 <div class="beloOzadje">
-<p> <?php echo "Pravilni odgovor: ";
-		  echo $odgovorPravilni."<br>";
-		  echo "Vaš odgovor: ";
+<p> <?php echo "<span style='background-color: white; padding:0px'>Pravilni odgovor: ";
+		  echo $odgovorPravilni."</span><br>";
+		  echo "<span style='background-color: white'>Vaš odgovor: ";
 		  echo $odgovorIgralca;
+		  echo "</span>"
 ?> 
 </p>
-<p> <?php echo "Pravilnost odgovora: "; 
+<p> <?php echo "<span style='background-color: white; padding:0px'>Pravilnost odgovora: "; 
 		  echo $pravilnostTekstovnegaOdg; 
-		  echo "%.<br>";
-		  echo "Čas: ";
+		  echo "%.</span><br>";
+		  echo "<span style='background-color: white; padding:0px'>Čas: ";
 		  echo $hitrostOdgovora;
-		  echo " sekund.<br>";
-		  echo "Točke odgovora: ";
-		  echo $pravilnostTeksUpostevajocCas."%.";
+		  echo " sekund.</span><br>";
+		  echo "<span style='background-color: white; padding-bottom:5px'>Točke odgovora: ";
+		  echo $pravilnostTeksUpostevajocCas."%.</span>";
 		  ?></p>
 
 <!--<div class="beloOzadje"> -->
-<p>Izberite želeno področje naslednjega vprašanja: </p>
+<p><span style="background-color: white; padding:5px"> Izberite želeno področje naslednjega vprašanja:</span></p>
 
 <ul id="podrocjaVpr">
 	<li><a id="podrocjaLevo" href="<?php echo site_url('Vadbena/random_question_podrocja/Knjizevnost_tekstovni'); ?>">Književnost</a></li>

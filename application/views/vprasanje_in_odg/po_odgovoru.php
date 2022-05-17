@@ -7,21 +7,22 @@
 
 <div class="beloOzadje">
 
-<p> <?php echo "Pravilni odgovor: ";
-		  echo $odgovorPravilni."<br>";
-		  echo "Vaš odgovor: ";
+<p> <?php echo "<span style='background-color: white; padding:2px'>Pravilni odgovor: ";
+		  echo $odgovorPravilni."</span><br>";
+		  echo "<span style='background-color: white'>Vaš odgovor: ";
 		  echo $odgovorIgralca;
+		  echo "</span>"
 ?> 
 </p>
-<p> <?php echo "Pravilnost odgovora: "; 
+<p> <?php echo "<span style='background-color: white; padding:5px'>Pravilnost odgovora: "; 
 		  echo $pravilnostTekstovnegaOdg; 
-		  echo "%.<br>";
-		  echo "Čas: ";
+		  echo "%.</span><br>";
+		  echo "<span style='background-color: white; padding:2px'>Čas: ";
 		  echo $hitrostOdgovora;
-		  echo " sekund.<br>";
-		  echo "Točke odgovora: ";
-		  echo $pravilnostTeksUpostevajocCas."%.";
-		  echo "Sedaj lahko igro zapustite brez izgube točk!";
+		  echo " sekund.</span><br>";
+		  echo "<span style='background-color: white; padding:5px'>Točke odgovora: ";
+		  echo $pravilnostTeksUpostevajocCas."%.</span>";
+		  echo "<span style='background-color: white; padding-bottom:5px'>Sedaj lahko igro zapustite brez izgube točk!</span>";
 		  ?></p>
 
 <?php
