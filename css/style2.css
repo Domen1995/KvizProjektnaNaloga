@@ -60,6 +60,18 @@ form span{
 	size:6;
 }
 
+.beloOzadje{
+	text-align: center;
+	background-color: white;
+	font-family: tahoma;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.beloOzadje p{
+	font-size: 30px;
+}
+
 /*
 #ozadjeVprasanja{
 	background-image: url('slike/test-results-in-school-picture-id529206743.jpg');
