@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/style2.css">
 </head>
 	<body>
-		<ul>
+		<ul id="headerMenu">
 			<li><a id ="meniLevo" href="<?php echo site_url('Ranking/vsiRazlicniVzdevki'); ?>">Rang lista</a></li>
 			<li><a href="<?php echo site_url('Vadbena/zacetek') ?>">Vadbena igra</a></li>
 		<?php if(isset($this->session->userdata['prijavljen']))	

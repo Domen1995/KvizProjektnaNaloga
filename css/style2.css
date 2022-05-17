@@ -14,7 +14,7 @@ ul{
 	/*padding-top: 15px;*/
 }
 
-li a{
+#headerMenu, li a{
 	font-family: tahoma;
 	font-size: 30px;
 	color:grey;
@@ -72,6 +72,13 @@ form span{
 	font-size: 30px;
 }
 
+#podrocjaVpr{
+	background-color: green;
+	font-size: 30px;
+	padding: 15px;
+	color:black;
+	background-color: green;
+}
 /*
 #ozadjeVprasanja{
 	background-image: url('slike/test-results-in-school-picture-id529206743.jpg');
