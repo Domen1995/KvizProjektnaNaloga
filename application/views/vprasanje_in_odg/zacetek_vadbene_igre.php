@@ -5,7 +5,6 @@
 	}
 </style>
 
-<br>
 <div class="beloOzadje">
 <h3>Tule vaši odgovori ne bodo vplivali na točke ter vas uvrstili na rang listo, tudi če ste prijavljeni.</h3>
 <p>Izberite želeno področje vprašanja: </p>
