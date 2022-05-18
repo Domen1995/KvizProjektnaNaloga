@@ -184,7 +184,14 @@ class Baza_vprasanj extends CI_Model{
 
 	public function oceniUpostevajocCas($pravilnostTekstovnegaOdg, $hitrostOdgovora)
 	{
-		$ocena = $pravilnostTekstovnegaOdg;
+		$pravilnostTekstovnegaOdg = $pravilnostTekstovnegaOdg - 3*$hitrostOdgovora;
+		if($pravilnostTekstovnegaOdg<=0)
+		{
+			return 0;
+		}
+		return $pravilnostTekstovnegaOdg;
+		//$ocena = $pravilnostTekstovnegaOdg;
+		/*
 		if($hitrostOdgovora>85&& $pravilnostTekstovnegaOdg>0)
 		{
 			return round((rand(4, 6)/3), 2);
@@ -195,7 +202,8 @@ class Baza_vprasanj extends CI_Model{
 			$ocena = $ocena - $hitrostOdgovora;
 			$i++;
 		}
-		return $ocena;
+		*/
+		//return $ocena;
 		/*
 		if($ocena<)
 		if($pravilnostTekstovnegaOdg > 50 && $pravilnostTekstovnegaOdg - 5*$hitrostOdgovora > 20)
