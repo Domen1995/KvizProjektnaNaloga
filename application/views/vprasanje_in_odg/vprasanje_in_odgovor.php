@@ -20,7 +20,7 @@ echo $vprasanjeIdOdg['Vprasanje'];
 echo "</span>"; 
 echo "</div>";
 echo "<p>";?>
-<input id="tekstInput" type="text" name="answer" value="">
+<input id="tekstInput" type="text" autocomplete="off" name="answer" value="">
 </p><input id="gumbOddajVpr" type="submit" name="submit" value="Oddaj odgovor!">
 </form>
 
