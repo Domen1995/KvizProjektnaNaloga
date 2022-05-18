@@ -14,7 +14,7 @@ echo validation_errors();
 echo form_open('vprasanja/fetch_answer/'.$vprasanjeIdOdg['sifra']);
 echo "<div class='vprasanje'>";
 ?>
-<span style="background-color: white; padding:5px">
+<span style="background-color: white">
 <?php
 echo $vprasanjeIdOdg['Vprasanje'];
 echo "</span>"; 
