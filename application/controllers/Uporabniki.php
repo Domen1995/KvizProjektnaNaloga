@@ -43,6 +43,12 @@ class Uporabniki extends CI_Controller {
 				$this->load->view('header');
 				$this->load->view('uporabniski_obrazci/registracija', $data);
 				$this->load->view('footer');
+			}elseif(strlen($data['vzdevek'])>30 || strlen($data['geslo'])>30 || strlen($data['eposta'])>38)
+			{
+				$data['neveljavenEnaslov'] = "Prekoračeno število znakov v vaših podatkih!!!";
+				$this->load->view('header');
+				$this->load->view('uporabniski_obrazci/registracija', $data);
+				$this->load->view('footer');
 			}else{
 				$registracijaUspela = $this->uporabniki_model->vnesi_registracijo($data);
 				if($registracijaUspela)
