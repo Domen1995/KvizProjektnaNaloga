@@ -87,6 +87,22 @@ class Baza_vprasanj extends CI_Model{
 			//'nakljucnaSifra' => $nakljucnaSifra
 		);
 		$this->db->insert('Odgovori_test', $data);
+		$this->pristej1Vprasanje();
+	}
+
+	public function pristej1Vprasanje()
+	{
+		$pogoj = "vzdevek = '".$_SESSION['vzdevek']."'";
+		$this->db->select('dosedanjihVpr');
+		$this->db->from('Tekmovalec');
+		$this->db->where($pogoj);
+		$indeksZadnjegaVprasanja = $this->db->get()->row_array();
+		$indeksZadnjegaVprasanja = intval($indeksZadnjegaVprasanja['dosedanjihVpr']);
+		$indeksZadnjegaVprasanja++;
+		$data['dosedanjihVpr'] = $indeksZadnjegaVprasanja;
+		$this->db->set($data);
+		$this->db->where('vzdevek', $_SESSION['vzdevek']);
+		$this->db->update('Tekmovalec');
 	}
 
 	public function shrani_odg_k_vprasanju($odgovor, $procenti, $hitrost, $skupni_procenti)  //tudi procente shrani

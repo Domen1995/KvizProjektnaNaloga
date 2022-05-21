@@ -93,8 +93,10 @@ class Ranking extends CI_Controller{
 		$mojVzdevek = $_SESSION['vzdevek'];
 		//$procenti = $this->procentiEnegaTekmovalca($mojVzdevek);
 		$procenti = $this->ranking_model->skupneTockeEnegaTekmovalca($mojVzdevek);
+		$dosedanjihVpr = $this->ranking_model->dosedanjihVprasanj($mojVzdevek);
 		$data['mojVzdevek'] = $mojVzdevek;
 		$data['mojeTocke'] = $procenti;
+		$data['dosedanjihVpr'] = $dosedanjihVpr;
 		$this->load->view('header');
 		$this->load->view('rang lista/moje_tocke', $data);
 		$this->load->view('footer');

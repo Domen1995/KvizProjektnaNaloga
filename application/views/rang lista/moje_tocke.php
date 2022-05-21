@@ -1,2 +1,3 @@
 <h1 style="color: grey; text-align: center; font-family: tahoma">Uporabnik: <?php echo $mojVzdevek; ?></h2>
 <h2 style="color: grey; text-align: center; font-family: tahoma">Trenutne točke: <?php echo $mojeTocke; ?>%.</h3>
+<h2 style="color: grey; text-align: center; font-family: tahoma">Do sedaj ste - neupoštevajoč ponastavljanje točk - odgovorili na toliko vprašanj: <?php echo $dosedanjihVpr; ?></h3>

@@ -79,6 +79,16 @@ class Ranking_model extends CI_Model{
 		*/
 		return $maksIndeks;
 	}
+
+	public function dosedanjihVprasanj($vzdevek)
+	{
+		$pogoj = "vzdevek = '".$vzdevek."'";
+		$this->db->select('dosedanjihVpr');
+		$this->db->from('Tekmovalec');
+		$this->db->where($pogoj);
+		$dosedanjihVpr = $this->db->get()->row_array();
+		return intval($dosedanjihVpr['dosedanjihVpr']);
+	}
 }
 
 ?>
