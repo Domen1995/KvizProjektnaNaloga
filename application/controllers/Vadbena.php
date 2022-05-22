@@ -13,17 +13,19 @@ class Vadbena extends CI_Controller{
 
 	public function zacetek()
 	{
-		$this->load->view('header');
+		$headerData['zavihek'] = "vadbenaIgra";
+		$this->load->view('header', $headerData);
 		$this->load->view('vprasanje_in_odg/zacetek_vadbene_igre');
 		$this->load->view('footer');
 	}
 
 	public function random_question_podrocja($izbranoPodrocje)
 	{
+		$headerData['zavihek'] = "vadbenaIgra";
 		$data['vprasanjeIdOdg'] = $this->Baza_vprasanj->random_question_from_database($izbranoPodrocje);
 		$this->Baza_vprasanj->pristej1Vprasanje();
 		$_SESSION['t0'] = microtime(true);
-		$this->load->view('header');
+		$this->load->view('header', $headerData);
 		$this->load->view('vprasanje_in_odg/vpr_in_odg_vadbena', $data);
 		$this->load->view('footer');
 	}
@@ -45,7 +47,8 @@ class Vadbena extends CI_Controller{
 		$data['pravilnostTeksUpostevajocCas'] = $pravilnostTeksUpostevajocCas;
 		$data['odgovorIgralca'] = $odgovorIgralca;
 		//$this->Baza_vprasanj->shrani_odgovor($odgovorIgralca);
-		$this->load->view('header');
+		$headerData['zavihek'] = "vadbenaIgra";
+		$this->load->view('header', $headerData);
 		$this->load->view('vprasanje_in_odg/po_odgovoru_vadbenem', $data);
 		$this->load->view('footer');
 	}

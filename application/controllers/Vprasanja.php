@@ -43,7 +43,8 @@ class Vprasanja extends CI_Controller {
 			//echo "Hja, niste bili pridni ... Fiženje vaših skupnih točk je izvedeno ...";
 			//$this->Baza_vprasanj->izbrisiOdgovor($indeksPredzadnjegaVprasanja);
 			$this->Baza_vprasanj->izbrisiVseOdgUporabnika();
-			$this->load->view('header');
+			$headerData['zavihek'] = "tockovanaVpr";
+			$this->load->view('header', $headerData);
 			$this->load->view('footer', $data);
 			// izbrisali bomo predzadnje vprasanje z odgovorom. To je edino vprašanje z goljufivim odg. se bo dalo iti nazaj na še prejšnja? Dalo se bo. Samo da ni deljenja z 0 pri zgolfanem odg.
 			// 
@@ -57,7 +58,8 @@ class Vprasanja extends CI_Controller {
 			//$this->form_validation->run();
 			$this->Baza_vprasanj->shrani_vpr_brez_odg($data['vprasanjeIdOdg']['Vprasanje'], $data['vprasanjeIdOdg']['Odgovor']);
 			$_SESSION['t0'] = microtime(true);
-			$this->load->view('header');
+			$headerData['zavihek'] = "tockovanaVpr";
+			$this->load->view('header', $headerData);
 			$this->load->view('vprasanje_in_odg/vprasanje_in_odgovor', $data);
 			$this->load->view('footer');
 		}
@@ -109,7 +111,8 @@ class Vprasanja extends CI_Controller {
 			$data['odgovorIgralca'] = $odgovorIgralca;
 			//$this->Baza_vprasanj->shrani_odgovor($odgovorIgralca);
 			$this->Baza_vprasanj->shrani_odg_k_vprasanju($odgovorIgralca, $pravilnostTekstovnegaOdg, $hitrostOdgovora, $pravilnostTeksUpostevajocCas);
-			$this->load->view('header');
+			$headerData['zavihek'] = "tockovanaVpr";
+			$this->load->view('header', $headerData);
 			$this->load->view('vprasanje_in_odg/po_odgovoru', $data);
 			$this->load->view('footer');
 		//}

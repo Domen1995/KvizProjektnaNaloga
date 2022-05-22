@@ -14,20 +14,23 @@ class Uporabniki extends CI_Controller {
 
 	public function pokazi_obrazec_registracija()
 	{
-		$this->load->view('header');
+		$headerData['zavihek'] = "registracija";
+		$this->load->view('header', $headerData);
 		$this->load->view('uporabniski_obrazci/registracija');
 		$this->load->view('footer');
 	}
 
 	public function registriraj()
 	{
+		$headerData['zavihek'] = "registracija";
+
 		$this->form_validation->set_rules('vzdevek', 'Vzdevek', 'required');
 		$this->form_validation->set_rules('geslo', 'Geslo', 'required');
 		$this->form_validation->set_rules('enaslov', 'Enaslov', 'required');
 		if($this->form_validation->run() == FALSE)
 		{
 			$data['neveljavniPodatki'] = "Neveljavni podatki! Poskusite ponovno ...";
-			$this->load->view('header');
+			$this->load->view('header', $headerData);
 			$this->load->view('uporabniski_obrazci/registracija', $data);
 			$this->load->view('footer');
 		}else
@@ -40,13 +43,13 @@ class Uporabniki extends CI_Controller {
 			if(!$this->eNaslovVeljaven($data['eposta']))
 			{
 				$data['neveljavenEnaslov'] = "Vnesite SVOJ e-naslov!!!";
-				$this->load->view('header');
+				$this->load->view('header', $headerData);
 				$this->load->view('uporabniski_obrazci/registracija', $data);
 				$this->load->view('footer');
 			}elseif(strlen($data['vzdevek'])>30 || strlen($data['geslo'])>30 || strlen($data['eposta'])>38)
 			{
 				$data['neveljavenEnaslov'] = "Prekoračeno število znakov v vaših podatkih!!!";
-				$this->load->view('header');
+				$this->load->view('header', $headerData);
 				$this->load->view('uporabniski_obrazci/registracija', $data);
 				$this->load->view('footer');
 			}else{
@@ -55,12 +58,12 @@ class Uporabniki extends CI_Controller {
 				{
 					//echo "registracija uspela";
 					$ravnoRegistriran['ravnokarRegistriran'] = "S temi podatki se odslej, začenši zdaj, prijavljajte: ";
-					$this->load->view('header');
+					$this->load->view('header', $headerData);
 					$this->load->view('uporabniski_obrazci/prijava', $ravnoRegistriran);
 					$this->load->view('footer');
 				}else{
 					$data['neveljavniPodatki'] = "Vnesli ste podatke že obstoječega uporabnika!";
-					$this->load->view('header');
+					$this->load->view('header', $headerData);
 					$this->load->view('uporabniski_obrazci/registracija', $data);
 					$this->load->view('footer');
 				}
@@ -85,19 +88,22 @@ class Uporabniki extends CI_Controller {
 
 	public function pokazi_obrazec_prijava()
 	{
-		$this->load->view('header');
+		$headerData['zavihek'] = "prijava";
+		$this->load->view('header', $headerData);
 		$this->load->view('uporabniski_obrazci/prijava');
 		$this->load->view('footer');
 	}
 
 	public function prijavi()
 	{
+		$headerData['zavihek'] = "prijava";
+
 		$this->form_validation->set_rules('vzdevek', 'Vzdevek', 'required');
 		$this->form_validation->set_rules('geslo', 'Geslo', 'required');
 		if($this->form_validation->run() == FALSE)
 		{
 			$data['neveljavniPodatki'] = "Neveljavni podatki! Poskusite ponovno ...";
-			$this->load->view('header');
+			$this->load->view('header', $headerData);
 			$this->load->view('uporabniski_obrazci/prijava', $data);
 			$this->load->view('footer');
 		}else{
@@ -119,7 +125,7 @@ class Uporabniki extends CI_Controller {
 			}else
 			{
 				$data['neveljavniPodatki'] = "Neveljavni podatki! Poskusite ponovno ...";
-				$this->load->view('header');
+				$this->load->view('header', $headerData);
 				$this->load->view('uporabniski_obrazci/prijava', $data);
 				$this->load->view('footer');
 			}
@@ -132,20 +138,23 @@ class Uporabniki extends CI_Controller {
 			'vzdevek' => ''
 		);
 		$this->session->unset_userdata('prijavljen', $userdata);
-		$this->load->view('header');
+		$headerData['zavihek'] = "odjava";
+		$this->load->view('header', $headerData);
 		$this->load->view('footer');
 	}
 
 	public function zacetek_igre()
 	{
-		$this->load->view('header');
+		$headerData['zavihek'] = "tockovanaVpr";
+		$this->load->view('header', $headerData);
 		$this->load->view('vprasanje_in_odg/zacetek_igre');
 		$this->load->view('footer');
 	}
 
 	public function resetirajMiTockeSvarilo()
 	{
-		$this->load->view('header');
+		$headerData['zavihek'] = "resetiranjeTock";
+		$this->load->view('header', $headerData);
 		$this->load->view('uporabniski_obrazci/resetiranje_tock_obrazec');
 		$this->load->view('footer');
 	}
@@ -154,7 +163,8 @@ class Uporabniki extends CI_Controller {
 	{
 		$this->Baza_vprasanj->izbrisiVseOdgUporabnika();
 		$data['vsiOdgIzbrisani'] = "Vaši dosedanji odgovori so izbrisani. V vnovičnem poskusu pa gremo do perfekcije!";
-		$this->load->view('header');
+		$headerData['zavihek'] = "resetiranjeTock";
+		$this->load->view('header', $headerData);
 		$this->load->view('pages/home', $data);
 		$this->load->view('footer');
 	}

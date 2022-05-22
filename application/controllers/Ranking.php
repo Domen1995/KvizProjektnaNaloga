@@ -40,7 +40,8 @@ class Ranking extends CI_Controller{
 				$data['manjkajocihVprasanj'] = $manjkajocihVprasanj;
 			}
 		}
-		$this->load->view('header');
+		$headerData['zavihek'] = "rangLista";
+		$this->load->view('header', $headerData);
 		$this->load->view('rang lista/ranklist', $data);
 		$this->load->view('footer');
 	}
@@ -97,7 +98,8 @@ class Ranking extends CI_Controller{
 		$data['mojVzdevek'] = $mojVzdevek;
 		$data['mojeTocke'] = $procenti;
 		$data['dosedanjihVpr'] = $dosedanjihVpr;
-		$this->load->view('header');
+		$headerData['zavihek'] = "mojeTocke";
+		$this->load->view('header', $headerData);
 		$this->load->view('rang lista/moje_tocke', $data);
 		$this->load->view('footer');
 	}
