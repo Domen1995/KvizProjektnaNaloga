@@ -5,5 +5,5 @@
 <!-- <?php
 //echo form_open('Uporabniki/resetTock'); ?> -->
 <form style="text-align: center" action="https://www.studenti.famnit.upr.si/~89181150/Kviz/CodeIgniter/index.php/Uporabniki/resetTock" method="post" accept-charset="utf-8">
-<input id="gumbResetTock" type="submit" name="submit" value="Resetiraj mi točke.">
+<input id="gumbResetTock" type="submit" name="submit" value="Ponastavi mi točke.">
 </form>
