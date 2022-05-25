@@ -1,7 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kviz</title>
+	<title>
+		<?php   if(isset($zavihek))
+				{
+					switch ($zavihek) {
+						case "rangLista":
+							echo "Rang lista";
+							break;
+						
+						case "vadbenaIgra":
+							echo "Vadbena igra";
+							break;
+
+						case "tockovanaVpr":
+							echo "Točkovana vprašanja";
+							break;
+
+						case "mojeTocke":
+							echo "Moje točke";
+							break;
+
+						case "resetiranjeTock":
+							echo "Ponastavitev točk";
+							break;
+
+						case "odjava":
+							echo "Kviz";
+							break;
+
+						case "registracija":
+							echo "Registracija";
+							break;
+
+						case "prijava":
+							echo "Prijava";
+							break;
+
+						default:
+							echo "Kviz";
+							break;
+					}
+				}else
+				{
+					echo "Kviz";
+				} ?>
+	</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/style.css">
 </head>
 	<body>
