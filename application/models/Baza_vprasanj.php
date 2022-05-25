@@ -16,20 +16,11 @@ class Baza_vprasanj extends CI_Model{
 		$nakljucniIndeksVprasanja = rand(1, $steviloVpr);
 
 		$pogoj = "id = '".$nakljucniIndeksVprasanja."'";
-		//$pogoj = "id = ".$steviloVpr;
-		//var_dump(intval($steviloVprasanj['stev']));
-		//$query = $this->db->get_where('Knjizevnost_tekstovni', array('id' => 1));
 		$this->db->select('*');
 		$this->db->from($podrocje);
 		$this->db->where($pogoj);
 		$vprasanje = $this->db->get();
 		return $vprasanje->row_array();
-		/*
-		//$query = $this->db->get();
-		$data = array()
-		$query = $this->db->get_where('Knjizevnost_tekstovni', array('id' => 1));
-		return $query->result_array();
-		*/
 	}
 
 	public function question_from_database_from_sifra($sifra)
@@ -51,7 +42,6 @@ class Baza_vprasanj extends CI_Model{
 		}
 		$pogoj = "sifra= '".$sifra."'";
 		$this->db->select('*');
-		//$this->db->from('Knjizevnost_tekstovni');
 		$this->db->from($podrocje);
 		$this->db->where($pogoj);
 		$vprasanje = $this->db->get();
@@ -74,9 +64,8 @@ class Baza_vprasanj extends CI_Model{
 		$this->db->select('max(id) as "stev"');
 		$this->db->from('Odgovori_test');
 		$this->db->where($pogoj);
-		$indeksZadnjegaVprasanja = $this->db->get()->row_array();// row_array je 1D tabela, result_array je 2D
+		$indeksZadnjegaVprasanja = $this->db->get()->row_array();
 		$indeksZadnjegaVprasanja = intval($indeksZadnjegaVprasanja['stev']);
-		//$nakljucnaSifra = rand(0, 1000000);
 		$data = array(
 			'Odgovor' => '',
 			'Vprasanje' => $vprasanje,
@@ -84,7 +73,6 @@ class Baza_vprasanj extends CI_Model{
 			'tekmovalec' => $_SESSION['vzdevek'],
 			'procenti' => 0,
 			'pravilni_odgovor' => $pravilniOdgovor
-			//'nakljucnaSifra' => $nakljucnaSifra
 		);
 		$this->db->insert('Odgovori_test', $data);
 		$this->pristej1Vprasanje();
@@ -107,14 +95,6 @@ class Baza_vprasanj extends CI_Model{
 
 	public function shrani_odg_k_vprasanju($odgovor, $procenti, $hitrost, $skupni_procenti)  //tudi procente shrani
 	{
-		/*
-		$pogoj = "tekmovalec = '".$_SESSION['vzdevek']."'";
-		$this->db->select('max(id) as "stev"');
-		$this->db->from('Odgovori_test');
-		$this->db->where($pogoj);
-		$indeksZadnjegaVprasanja = $this->db->get()->row_array();
-		$indeksZadnjegaVprasanja = intval($indeksZadnjegaVprasanja['stev']);
-		*/
 		$pogoj = "tekmovalec = '".$_SESSION['vzdevek']."'";
 		$indeksZadnjegaVprasanja = $this->maksIdVprasanjaUporabnika();
 		$pogoj = $pogoj." AND id = '".$indeksZadnjegaVprasanja."'";
@@ -122,14 +102,10 @@ class Baza_vprasanj extends CI_Model{
 		$this->db->from('Odgovori_test');
 		$this->db->where($pogoj);
 		$zadnjeVprasanje = $this->db->get()->row_array();
-
-		//$nakljucnaSifra = rand(0, 1000000);
 		$data['Odgovor'] = $odgovor;
 		$data['procenti'] = $procenti;
 		$data['hitrost'] = $hitrost;
 		$data['skupni_procenti'] = $skupni_procenti;
-		//$data['nakljucnaSifra'] = $nakljucnaSifra;
-		//$this->db->set('Odgovor', $odgovor);
 		$this->db->set($data);
 		$this->db->where($pogoj);
 		$this->db->update('Odgovori_test');
@@ -139,19 +115,6 @@ class Baza_vprasanj extends CI_Model{
 			$this->izbrisiOdgovore($odgovorovZaIzbrisati);
 		}
 	}
-
-	/*
-	public function preveriZadnjeVprasanje()  
-		// Če bodo na novo izračunani procenti različni,
-		// obvesti uporabnika o goljufiji. In nastavi se na 0 točk zadnje vprašanje.
-		// Če se po naključju ponovi vprašanje, bo imel možnost pogoljufati z 1 klikom nazaj, 
-		// a mu ne bo koristilo, ker bo odgovor tak, kot ga je že sam podal in bi istega ali boljšega
-		//loh še enkrat podal.
-	{
-		$indeksZadnjegaVprasanja = $this->maksIdVprasanjaUporabnika();
-		$zadnjeVprasanjeTekmovalca = $this->zadnjeVprasanje($indeksZadnjegaVprasanja);
-	}
-	*/
 
 	public function maksIdVprasanjaUporabnika()
 	{
@@ -206,38 +169,11 @@ class Baza_vprasanj extends CI_Model{
 			return 0;
 		}
 		return $pravilnostTekstovnegaOdg;
-		//$ocena = $pravilnostTekstovnegaOdg;
-		/*
-		if($hitrostOdgovora>85&& $pravilnostTekstovnegaOdg>0)
-		{
-			return round((rand(4, 6)/3), 2);
-		}
-		$i = 0;
-		while($ocena-$hitrostOdgovora>0 && $i<5)
-		{
-			$ocena = $ocena - $hitrostOdgovora;
-			$i++;
-		}
-		*/
-		//return $ocena;
-		/*
-		if($ocena<)
-		if($pravilnostTekstovnegaOdg > 50 && $pravilnostTekstovnegaOdg - 5*$hitrostOdgovora > 20)
-		{
-			$pravilnostTekstovnegaOdg = $pravilnostTekstovnegaOdg - 5*$hitrostOdgovora;
-		}
-		return $pravilnostTekstovnegaOdg;
-		*/
 	}
 
 	public function izbrisiOdgovore($id)
-		// izbrise toliko odg, da jih ostane zadnjih 40
+		// izbrise toliko odg, da jih ostane zadnjih 41
 	{
-		/*
-		$pogoj = "tekmovalec = '".$_SESSION['vzdevek']."' AND id = '".$id."'";
-		$data['tekmovalec'] = $_SESSION['vzdevek'];
-		$data['id'] = $id;
-		*/
 		$vzdevek = $_SESSION['vzdevek'];
 		for($i=1; $i<=$id; $i++)
 		{
@@ -253,34 +189,6 @@ class Baza_vprasanj extends CI_Model{
 		$this->db->where($data);
 		$this->db->delete('Odgovori_test');
 	}
-
-	/*
-	public function nedovoljena_ponovitev_odgovora()
-	{
-
-	}
-	*/
-
-	/*
-	public function zadnji_odgovor_igralca_prazen()
-	{
-		$this->db->select('max(id) as "stev"');
-		$this->db->from('Odgovori_test');
-		$indeksZadnjegaVprasanja = $this->db->get()->row_array();// row_array je 1D tabela, result_array je 2D
-		$indeksZadnjegaVprasanja = intval($indeksZadnjegaVprasanja['stev']);
-		$pogoj = "id = '".$indeksZadnjegaVprasanja."'";
-		$this->db->select('Odgovor');
-		$this->db->from('Odgovori_test');
-		$this->db->where($pogoj);
-		$odgovor = $this->db->get()->row_array();
-		$odgovor = $odgovor['Odgovor'];
-		if($odgovor == "!?!Prazno!?!")
-		{
-			return true;
-		}
-		return false;
-	}
-	*/
 }
 
 ?>

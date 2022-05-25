@@ -46,7 +46,6 @@ class Vadbena extends CI_Controller{
 		$data['hitrostOdgovora'] = $hitrostOdgovora;
 		$data['pravilnostTeksUpostevajocCas'] = $pravilnostTeksUpostevajocCas;
 		$data['odgovorIgralca'] = $odgovorIgralca;
-		//$this->Baza_vprasanj->shrani_odgovor($odgovorIgralca);
 		$headerData['zavihek'] = "vadbenaIgra";
 		$this->load->view('header', $headerData);
 		$this->load->view('vprasanje_in_odg/po_odgovoru_vadbenem', $data);

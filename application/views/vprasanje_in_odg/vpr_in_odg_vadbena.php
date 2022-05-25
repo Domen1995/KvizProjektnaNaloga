@@ -6,10 +6,7 @@
 </style>
 <div class="beloOzadje">
 
-<!--<h2>Pazite! Ob zvitem poskusu vrnitve na predhodno vprašanje se bodo vaše skupne točke sfižile!</h2> -->
-
 <?php
-//$data['vprasanjeInOdg'] = "bla";
 echo validation_errors();
 echo form_open('vadbena/fetch_answer/'.$vprasanjeIdOdg['sifra']);
 echo "<div class='vprasanje'>";

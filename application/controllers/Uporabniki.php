@@ -56,12 +56,13 @@ class Uporabniki extends CI_Controller {
 				$registracijaUspela = $this->uporabniki_model->vnesi_registracijo($data);
 				if($registracijaUspela)
 				{
-					//echo "registracija uspela";
+					$headerData['zavihek'] = "prijava";
 					$ravnoRegistriran['ravnokarRegistriran'] = "S temi podatki se odslej, začenši zdaj, prijavljajte: ";
 					$this->load->view('header', $headerData);
 					$this->load->view('uporabniski_obrazci/prijava', $ravnoRegistriran);
 					$this->load->view('footer');
 				}else{
+					$headerData['zavihek'] = "registracija";
 					$data['neveljavniPodatki'] = "Vnesli ste podatke že obstoječega uporabnika!";
 					$this->load->view('header', $headerData);
 					$this->load->view('uporabniski_obrazci/registracija', $data);
@@ -114,14 +115,8 @@ class Uporabniki extends CI_Controller {
 			if($this->uporabniki_model->preveri_podatke_prijave($data))
 			{
 				$this->session->set_userdata('prijavljen', $data);
-				//$_SESSION['itemm'] = 'blo';
 				$_SESSION['vzdevek'] = $data['vzdevek'];
 				$this->zacetek_igre();
-				/*
-				$this->load->view('header');
-				$this->load->view('vprasanje_in_odg/zacetek_igre');
-				$this->load->view('footer');
-				*/
 			}else
 			{
 				$data['neveljavniPodatki'] = "Neveljavni podatki! Poskusite ponovno ...";

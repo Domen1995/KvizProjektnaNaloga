@@ -11,9 +11,7 @@ class Ranking extends CI_Controller{
 	}
 
 	public function vsiRazlicniVzdevki()
-		// ustvari tabelo uporabnik + tocke + mesto
 	{
-		//$procenti = $this->ranking_model->skupneTockeEnegaTekmovalca($vzdev);
 		$tekmovalciRowArray = $this->ranking_model->vsiRazlicniTekmovalci();
 		$tekmovalciProcenti = array();
 		$procenti = array();
@@ -92,7 +90,6 @@ class Ranking extends CI_Controller{
 	public function moje_tocke()
 	{
 		$mojVzdevek = $_SESSION['vzdevek'];
-		//$procenti = $this->procentiEnegaTekmovalca($mojVzdevek);
 		$procenti = $this->ranking_model->skupneTockeEnegaTekmovalca($mojVzdevek);
 		$dosedanjihVpr = $this->ranking_model->dosedanjihVprasanj($mojVzdevek);
 		$data['mojVzdevek'] = $mojVzdevek;

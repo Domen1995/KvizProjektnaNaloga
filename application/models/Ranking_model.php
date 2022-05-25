@@ -41,7 +41,6 @@ class Ranking_model extends CI_Model{
 			$odVprasanjaNaprej = 1;
 		}
 		$pogoj = "tekmovalec = '".$vzdevek."' AND id >= '".$odVprasanjaNaprej."'";
-		//$this->db->select('sum(procenti) as sumProcenti');
 		$this->db->select('sum(skupni_procenti) as sumProcenti');
 		$this->db->from('Odgovori_test');
 		$this->db->where($pogoj);
@@ -71,12 +70,6 @@ class Ranking_model extends CI_Model{
 		$this->db->where($pogoj);
 		$maksIndeks = $this->db->get()->row_array();
 		$maksIndeks = intval($maksIndeks['maksid']);
-		/*
-		if($maksIndeks>100)
-		{
-			$maksIndeks = $maksIndeks-100;
-		}
-		*/
 		return $maksIndeks;
 	}
 

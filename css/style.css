@@ -11,7 +11,6 @@ a{
 
 ul{
 	list-style-type: none;
-	/*padding-top: 15px;*/
 }
 
 #headerMenu li a{
@@ -20,13 +19,7 @@ ul{
 	color:grey;
 	float:left;
 	text-decoration: none;
-	padding: 11px 30px 11px 30px; /*30px;*/
-	/*
-	padding-left: :30px;
-	padding-right: 30px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	*/
+	padding: 11px 30px 11px 30px;
 	background-color:rgb(80,0,0);
 }
 

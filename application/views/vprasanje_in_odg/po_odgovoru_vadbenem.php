@@ -23,7 +23,6 @@
 		  echo $pravilnostTeksUpostevajocCas."%.</span>";
 		  ?></p>
 
-<!--<div class="beloOzadje"> -->
 <p><span style="background-color: white; padding:5px"> Izberite želeno področje naslednjega vprašanja:</span></p>
 
 <ul id="podrocjaVpr">
