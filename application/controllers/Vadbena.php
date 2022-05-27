@@ -23,7 +23,10 @@ class Vadbena extends CI_Controller{
 	{
 		$headerData['zavihek'] = "vadbenaIgra";
 		$data['vprasanjeIdOdg'] = $this->Baza_vprasanj->random_question_from_database($izbranoPodrocje);
-		$this->Baza_vprasanj->pristej1Vprasanje();
+		if(isset($this->session->userdata['prijavljen']))
+		{
+			$this->Baza_vprasanj->pristej1Vprasanje();
+		}
 		$_SESSION['t0'] = microtime(true);
 		$this->load->view('header', $headerData);
 		$this->load->view('vprasanje_in_odg/vpr_in_odg_vadbena', $data);
