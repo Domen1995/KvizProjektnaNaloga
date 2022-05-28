@@ -55,14 +55,15 @@ class Baza_vprasanj extends CI_Model{
 			'Vprasanje' => 'ni vazno',
 			'id' => 2
 		);
-		$this->db->insert('Odgovori_test', $data);
+		//$this->db->insert('Odgovori_test', $data);
+		$this->db->insert('Odgovori', $data);
 	}
 
 	public function shrani_vpr_brez_odg($vprasanje, $pravilniOdgovor)
 	{
 		$pogoj = "tekmovalec = '".$_SESSION['vzdevek']."'";
 		$this->db->select('max(id) as "stev"');
-		$this->db->from('Odgovori_test');
+		$this->db->from('Odgovori');
 		$this->db->where($pogoj);
 		$indeksZadnjegaVprasanja = $this->db->get()->row_array();
 		$indeksZadnjegaVprasanja = intval($indeksZadnjegaVprasanja['stev']);
@@ -74,7 +75,7 @@ class Baza_vprasanj extends CI_Model{
 			'procenti' => 0,
 			'pravilni_odgovor' => $pravilniOdgovor
 		);
-		$this->db->insert('Odgovori_test', $data);
+		$this->db->insert('Odgovori', $data);
 		$this->pristej1Vprasanje();
 	}
 
@@ -99,7 +100,7 @@ class Baza_vprasanj extends CI_Model{
 		$indeksZadnjegaVprasanja = $this->maksIdVprasanjaUporabnika();
 		$pogoj = $pogoj." AND id = '".$indeksZadnjegaVprasanja."'";
 		$this->db->select('*');
-		$this->db->from('Odgovori_test');
+		$this->db->from('Odgovori');
 		$this->db->where($pogoj);
 		$zadnjeVprasanje = $this->db->get()->row_array();
 		$data['Odgovor'] = $odgovor;
@@ -108,7 +109,7 @@ class Baza_vprasanj extends CI_Model{
 		$data['skupni_procenti'] = $skupni_procenti;
 		$this->db->set($data);
 		$this->db->where($pogoj);
-		$this->db->update('Odgovori_test');
+		$this->db->update('Odgovori');
 		$odgovorovZaIzbrisati = $indeksZadnjegaVprasanja-42;
 		if($odgovorovZaIzbrisati>0)
 		{
@@ -120,7 +121,7 @@ class Baza_vprasanj extends CI_Model{
 	{
 		$pogoj = "tekmovalec = '".$_SESSION['vzdevek']."'";
 		$this->db->select('max(id) as "stev"');
-		$this->db->from('Odgovori_test');
+		$this->db->from('Odgovori');
 		$this->db->where($pogoj);
 		$indeksZadnjegaVprasanja = $this->db->get()->row_array();
 		$indeksZadnjegaVprasanja = intval($indeksZadnjegaVprasanja['stev']);
@@ -132,7 +133,7 @@ class Baza_vprasanj extends CI_Model{
 		$pogoj = "tekmovalec = '".$_SESSION['vzdevek']."'";
 		$pogoj = $pogoj." AND id = '".$indeksZadnjegaVprasanja."'";
 		$this->db->select('*');
-		$this->db->from('Odgovori_test');
+		$this->db->from('Odgovori');
 		$this->db->where($pogoj);
 		$zadnjeVprasanje = $this->db->get()->row_array();
 		return $zadnjeVprasanje;
@@ -179,7 +180,7 @@ class Baza_vprasanj extends CI_Model{
 		{
 			$data = array('tekmovalec' => $vzdevek, 'id' => $i);
 			$this->db->where($data);
-			$this->db->delete("Odgovori_test");
+			$this->db->delete("Odgovori");
 		}
 	}
 
@@ -187,7 +188,7 @@ class Baza_vprasanj extends CI_Model{
 	{
 		$data = array('tekmovalec' => $_SESSION['vzdevek']);
 		$this->db->where($data);
-		$this->db->delete('Odgovori_test');
+		$this->db->delete('Odgovori');
 	}
 }
 
