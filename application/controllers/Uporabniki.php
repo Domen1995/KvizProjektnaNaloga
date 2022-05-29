@@ -40,7 +40,14 @@ class Uporabniki extends CI_Controller {
 				'geslo' => $this->input->post('geslo'),
 				'eposta' => $this->input->post('enaslov')
 			);
-			if(!$this->eNaslovVeljaven($data['eposta']))
+			if($this->vsebujeBeginTag($data['vzdevek']) || $this->vsebujeBeginTag($data['geslo'])|| $this->vsebujeBeginTag($data['eposta']))
+			{
+				$data['neveljavenEnaslov'] = "Nobeden od vnosov ne sme vsebovati simbola '<'"; // neveljaven tag <
+				$this->load->view('header', $headerData);
+				$this->load->view('uporabniski_obrazci/registracija', $data);
+				$this->load->view('footer');
+			}
+			elseif(!$this->eNaslovVeljaven($data['eposta']))
 			{
 				$data['neveljavenEnaslov'] = "Vnesite SVOJ e-naslov!!!";
 				$this->load->view('header', $headerData);
@@ -162,6 +169,18 @@ class Uporabniki extends CI_Controller {
 		$this->load->view('header', $headerData);
 		$this->load->view('pages/home', $data);
 		$this->load->view('footer');
+	}
+
+	public function vsebujeBeginTag($niz)
+	{
+		for($i=0;$i<strlen($niz); $i++)
+		{
+			if(substr($niz, $i, 1) == "<")
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 }
 
